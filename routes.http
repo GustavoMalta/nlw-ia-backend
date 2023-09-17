@@ -1,6 +1,16 @@
 # @name list-prompts
 GET http://localhost:3333/prompts 
 
+#### 
+
+# @name list-videos
+GET http://localhost:3333/videos 
+
+#### 
+
+# @name detail-video
+GET http://localhost:3333/videos/6e50fe42-51df-462a-8595-6f3231b96df6
+
 ###
 
 # @name uploadvideo
@@ -17,7 +27,7 @@ Content-Type: audio/mpeg
 ###
 
 # @name createTranscription
-POST http://localhost:3333/videos/9910be9a-d1d3-4a4a-ba41-d356235c47f2/transcription
+POST http://localhost:3333/videos/6e50fe42-51df-462a-8595-6f3231b96df6/transcription
 Content-Type: application/json
 
 {

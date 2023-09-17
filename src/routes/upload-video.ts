@@ -24,7 +24,7 @@ export async function uploadVideoRoute(app: FastifyInstance) {
         .send({ message: "Missing File! File not found" });
 
     const extension = path.extname(data.filename);
-    console.log(extension);
+
     if (extension !== ".mp3")
       return reply
         .status(400)
@@ -43,7 +43,7 @@ export async function uploadVideoRoute(app: FastifyInstance) {
 
     const video = await prisma.video.create({
       data: {
-        name: data.filename,
+        name: path.parse(fileBaseName).name,
         path: uploadDir,
       },
     });
