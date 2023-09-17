@@ -40,6 +40,5 @@ dist/**/*
 # ignore yarn.lock
 yarn.lock
 
-tempFiles
-
+tempFiles/*.mp3
 prisma/database
